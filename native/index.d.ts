@@ -1,0 +1,75 @@
+import { Accessibility } from "./accessibility";
+import { App } from "./app";
+import { Clipboard } from "./clipboard";
+import { Channel } from "./common";
+import { CrashReporter } from "./crashreporter";
+import { DesktopCapturer } from "./desktopcapture";
+import { Features } from "./features";
+import { FileManager } from "./filemanager";
+import { GpuSettings } from "./gpusettings";
+import { Http } from "./http";
+import { Ipc } from "./ipc";
+import { NativeModules } from "./nativemodules";
+import { Os } from "./os";
+import { PowerMonitor } from "./powermonitor";
+import { powerSaveBlocker } from "./powersaveblocker";
+import { Process } from "./process";
+import { ProcessUtils } from "./processuitls";
+import { SafeStorage } from "./safestorage";
+import { Settings } from "./settings";
+import { SpellCheck } from "./spellcheck";
+import { Thumbar } from "./thumbar";
+import { UserDataCache } from "./userdatacache";
+
+export * from "./accessibility";
+export * from "./app";
+export * from "./clipboard";
+export * from "./common";
+export * from "./crashreporter";
+export * from "./desktopcapture";
+export * from "./features";
+export * from "./filemanager";
+export * from "./gpusettings";
+export * from "./http";
+export * from "./ipc";
+export * from "./nativemodules";
+export * from "./os";
+export * from "./powermonitor";
+export * from "./powersaveblocker";
+export * from "./process";
+export * from "./processuitls";
+export * from "./safestorage";
+export * from "./settings";
+export * from "./spellcheck";
+export * from "./userdatacache";
+
+export default interface DiscordNative {
+    accessibility: Accessibility;
+    app: App;
+    clipboard: Clipboard;
+    crashReporter: CrashReporter;
+    desktopCapture: DesktopCapturer;
+    features: Features;
+    fileManager: FileManager;
+    gpuSettings: GpuSettings;
+    http: Http;
+    ipc: Ipc;
+    isRenderer: boolean;
+    nativeModules: NativeModules;
+    os: Os;
+    powerMonitor: PowerMonitor;
+    powerSaveBlocker: powerSaveBlocker;
+    process: Process;
+    processUtils: ProcessUtils;
+    remoteApp: App;
+    remotePowerMonitor: PowerMonitor;
+    safeStorage: SafeStorage;
+    setUncaughtExceptionHandler(
+        listener: NodeJS.UncaughtExceptionListener,
+    ): void;
+    settings: Settings;
+    spellCheck: SpellCheck;
+    thumbar: Thumbar;
+    userDataCache: UserDataCache;
+    window: Window;
+}

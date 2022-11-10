@@ -1,6 +1,7 @@
 import { LoDashStatic } from "lodash";
 
 import { BdApi } from "./bdapi";
+import DiscordNative from "./native";
 
 export * from "./addonapi";
 export * from "./bdapi";
@@ -14,6 +15,7 @@ export * from "./ui";
 export * from "./utils";
 export * from "./webpack";
 export * from "./legacy";
+export * from "./native";
 
 export type Cancel = () => void;
 
@@ -23,10 +25,14 @@ declare global {
 
     const _: LoDashStatic;
 
+    const DiscordNative: DiscordNative;
+
     interface Window {
         /** BetterDiscord's global plugin API. */
         BdApi: BdApi;
 
         _: LoDashStatic;
+
+        DiscordNative: DiscordNative;
     }
 }
